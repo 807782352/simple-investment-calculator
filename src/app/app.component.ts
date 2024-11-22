@@ -10,7 +10,7 @@ import { UserInputComponent } from './user-input/user-input.component';
 })
 export class AppComponent {
   // 方式一：计算annual investment data （组件中写）
-  calculateInvestmentResults(data: {
+  onCalculateInvestmentResults(data: {
     initialInvestment: number;
     duration: number;
     annualInvestment: number;
@@ -37,6 +37,7 @@ export class AppComponent {
       });
     }
 
+    console.log(annualData);
     return annualData;
   }
 }
