@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { HeaderComponent } from './header/header.component';
 import { UserInputComponent } from './user-input/user-input.component';
 
+import { type InvestmentInput } from './investment-input';
+
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -10,12 +12,7 @@ import { UserInputComponent } from './user-input/user-input.component';
 })
 export class AppComponent {
   // 方式一：计算annual investment data （组件中写）
-  onCalculateInvestmentResults(data: {
-    initialInvestment: number;
-    duration: number;
-    annualInvestment: number;
-    expectedReturn: number;
-  }) {
+  onCalculateInvestmentResults(data: InvestmentInput) {
     const { initialInvestment, duration, annualInvestment, expectedReturn } =
       data;
     const annualData = [];
