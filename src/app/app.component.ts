@@ -1,16 +1,20 @@
 import { Component } from '@angular/core';
 import { HeaderComponent } from './header/header.component';
 import { UserInputComponent } from './user-input/user-input.component';
+import { InvestmentResultComponent } from './investment-result/investment-result.component';
 
-import { type InvestmentInput } from './investment-input';
+import { type InvestmentInput } from './investment-input.model';
+import { type InvestmentResult } from './investment-results.model';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   templateUrl: './app.component.html',
-  imports: [HeaderComponent, UserInputComponent],
+  imports: [HeaderComponent, UserInputComponent, InvestmentResultComponent],
 })
 export class AppComponent {
+  resultsData?: InvestmentResult;
+
   // 方式一：计算annual investment data （组件中写）
   onCalculateInvestmentResults(data: InvestmentInput) {
     const { initialInvestment, duration, annualInvestment, expectedReturn } =
@@ -35,6 +39,6 @@ export class AppComponent {
     }
 
     console.log(annualData);
-    return annualData;
+    this.resultsData = annualData;
   }
 }
