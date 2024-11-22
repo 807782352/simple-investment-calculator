@@ -13,7 +13,7 @@ import { type InvestmentResult } from './investment-results.model';
   imports: [HeaderComponent, UserInputComponent, InvestmentResultComponent],
 })
 export class AppComponent {
-  resultsData?: InvestmentResult;
+  resultsData?: InvestmentResult[];
 
   // 方式一：计算annual investment data （组件中写）
   onCalculateInvestmentResults(data: InvestmentInput) {

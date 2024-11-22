@@ -9,7 +9,5 @@ import { type InvestmentResult } from '../investment-results.model';
   styleUrl: './investment-result.component.css',
 })
 export class InvestmentResultComponent {
-  @Input() results?: InvestmentResult;
-
-
+  @Input() results?: InvestmentResult[];
 }
