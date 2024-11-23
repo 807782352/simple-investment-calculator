@@ -11,8 +11,6 @@ import { InvestmentService } from '../investment.service';
   styleUrl: './user-input.component.css',
 })
 export class UserInputComponent {
-  calculate = output<InvestmentInput>();
-
   constructor(private investmentService: InvestmentService) {}
 
   // remember that the output of the Inputs would always be string
